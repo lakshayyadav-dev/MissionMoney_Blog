@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Raleway', sans-serif; */
+
+* {
+	margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	scroll-behavior: smooth;
+	/* scroll-padding-top: 10rem; */
+}
+
+
+:root {
+	--bg: #181818;
+	--primary: #1c1c1c;
+	--secondary: #111111;
+}
+
+body {
+	color: white;
+	background-color: var(--bg);
+	font-family: 'Montserrat', sans-serif;
+	overflow-x: hidden;
+}
+
+section {
+	margin-bottom: 5rem;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+input,textarea {
+	padding: 20px;
+	border: none;
+	outline: none;
+	background-color: #111111;
+	margin-top: 10px;
+	color: white;
+	font-size: 1.25rem;
+	font-family: 'JetBrains Mono', sans-serif;
+}
+input:focus {
+	background-color: #1c1c1c;
+}
+textarea:focus {
+	background-color: #1c1c1c;
+}
+
+.compose-heading {
+	margin-bottom: 5rem;
+}
+.form-group {
+	display: flex;
+	flex-direction: column;
+	/* height: 100vh; */
+}
+.form-group input, textarea{
+	margin-bottom: 2rem;
+}
+
+nav {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 8vh;
+}
+.logo {
+	text-transform: uppercase;
+	font-size: 2rem;
+	letter-spacing: 5px;
+	text-shadow: 2px 2px 10px #000000;
+	font-weight: bold;
+}
+.nav-links li {
+	list-style: none;
+	transition: all 0.15s ease;
+}
+.nav-links li:hover {
+	transform: scale(1.1);
+}
+.nav-links {
+	display: flex;
+	justify-content: space-around;
+	width: 55%;
+}
+.nav-links a {
+	font-size: 0.85rem;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+	text-shadow: 2px 2px 3px #000000;
+}
+.burger {
+	display: none;
+	cursor: pointer;
+}
+.burger div {
+	width: 50px;
+	height: 1px;
+	margin: 0.5rem 0;
+	background-color: white;
+}
+
+.container {
+	margin-top: 2.5rem;
+	padding: 2.5rem;
+	min-height: 100vh;
+}
+
+.post-container {
+	margin-top: 2.5rem;
+	padding: 2.5rem;
+	min-height: 100vh;
+}
+
+.home {
+	height: 100vh;
+}
+.home h1 {
+	text-align: center;
+	font-size: 10rem;
+	text-transform: uppercase;
+	font-weight: 400;
+	text-shadow: 1px 1px 20px #000000;
+}
+.image-container {
+	position: absolute;
+	z-index: -1;
+	left: 0;
+	right: 0;
+	bottom: -150px;
+	display: flex;
+	justify-content: center;
+}
+.image-container img {
+	/* width: 25%; */
+	/* width: 325px; */
+	/* height: 475px; */
+	object-fit: cover;
+}
+
+.about {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 100vh;
+	font-size: 1.3rem;
+	/* text-align: center; */
+	line-height: 2.5rem;
+	/* font-weight: 500; */
+	font-family: 'JetBrains Mono', sans-serif;
+}
+.about p {
+	padding: 25px 50px;
+	border-bottom: solid 1px white;
+	border-top: solid 1px white;
+}
+
+.posts-section-heading {
+	font-size: 3rem;
+	text-transform: uppercase;
+	font-weight: 400;
+	letter-spacing: 4rem;
+	text-align: center;
+	padding-bottom: 20px;
+}
+.posts-holder {
+	margin-top: 5rem;
+	display: grid;
+	/* justify-content: center; */
+	grid-template-columns: auto;
+	row-gap: 2.5rem;
+	column-gap: 2.5rem;
+}
+.post {
+	/* min-width: 500px; */
+	min-height: 650px;
+	background-color: var(--primary);
+	border-radius: 7.5px;
+	box-shadow: 0px 0px 15px 5px var(--secondary);
+}
+.post img {
+	object-fit: cover;
+	height: 300px;
+	width: 100%;
+	border-top-left-radius: 7.5px;
+	border-top-right-radius: 7.5px;
+}
+.post h1 {
+	margin-top: 1rem;
+	font-size: 2rem;
+	padding: 20px;
+}
+.post p {
+	line-height: 1.5rem;
+	padding: 20px;
+	padding-top: 10px;
+}
+.post a {
+	margin-top: 1.75rem;
+	font-size: 1.25rem;
+	padding: 15px;
+	border: solid 1px white;
+	width: 100%;
+	text-transform: uppercase;
+	letter-spacing: 2rem;
+	display: block;
+	text-align: center;
+	transition: all 0.2s ease;
+}
+.post a:hover {
+	background-color: white;
+	color: black;
+}
+
+.post-title {
+	margin: 2.5rem;
+	padding-bottom: 1rem;
+	font-size: 3rem;
+	border-bottom: solid 1px white;
+}
+.post-body {
+	font-size: 1.2rem;
+	font-family: 'JetBrains Mono';
+	line-height: 2.35rem;
+}
+
+.btn {
+	background: none;
+	margin-top: 1.75rem;
+	font-size: 1.25rem;
+	padding: 15px;
+	border: solid 1px white;
+	width: 100%;
+	text-transform: uppercase;
+	letter-spacing: 2rem;
+	display: block;
+	text-align: center;
+	transition: all 0.2s ease;
+	color: white;
+}
+.btn:hover {
+	background-color: white;
+	color: black;
+}
+
+.footer {
+	/* position: fixed; */
+	/* bottom: 0; */
+	width: 100%;
+	height: 300px;
+    background-color: #111111;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.footer p {
+	text-align: center;
+	font-size: 1.25rem;
+}
+.footer div {
+	height: 100%;
+}
+.footer ul {
+	height: 100%;
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+.footer li {
+	padding: 10px;
+	padding-left: 0;
+	border-bottom: solid 1px white;
+	width: 100%;
+	
+	transition: all 0.15s ease;
+}
+.footer li:hover {
+	width: 130%;
+}
+
+
+@media screen and (max-width:768px) {
+	.image-container {
+		bottom: 200px;
+	}
+	.image-container img {
+		width: 1000px;
+		/* height: 600px; */
+	}
+	.nav-links {
+		position: absolute;
+		height: 92vh;
+		top: 8vh;
+		right: 0px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: #1d1d1de1;
+		transform: translateX(100%);
+		transition: transform 0.5s ease-in;
+		/* border-left: solid 1px white; */
+	}
+	.nav-links li {
+		opacity: 0;
+	}
+	.burger {
+		display: block;
+	}
+
+	.about p {
+		font-size: 1.2rem;
+	}
+
+	.post-container {
+		padding: 0rem;
+	}
+	.post-title {
+		margin: 2.5rem;
+		margin-left: 0;
+		margin-right: 0;
+		font-size: 2.5rem;
+	}
+	.post-body {
+		font-size: 1.1rem;
+		line-height: 2.1rem;
+	}
+	.posts-section-heading {
+		font-size: 2.5rem;
+		letter-spacing: 2.5rem;
+		margin-left: 25px;
+	}
+	.footer p {
+		font-size: 1rem;
+	}
+}
+@media screen and (max-width:980px) {
+	.home h1 {
+		margin-top: 2.5rem;
+		font-size: 5rem;
+	}
+}
+
+.nav-active {
+	transform: translateX(0%);
+}
+
+
+@keyframes navLinkFade {
+	from {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}

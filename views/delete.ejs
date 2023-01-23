@@ -1,0 +1,13 @@
+<%- include("partials/header"); -%>
+
+<form class="" action="/delete" method="post">
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" name="password" required/>
+        <label>ID</label>
+        <input class="form-control" type="text" name="id" autocomplete="off" required/>
+    </div>
+    <button class="btn" type="submit" name="button">Delete</button>
+</form>
+
+<%- include("partials/footer"); -%>

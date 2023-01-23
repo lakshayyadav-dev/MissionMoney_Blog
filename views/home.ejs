@@ -1,0 +1,45 @@
+<%- include("partials/header"); -%>
+  <div class="image-container">
+    <img src="images/Artboard 1.png">
+  </div>
+  <section class="home" id="home">
+    <h1>Mission <br> Money</h1>
+  </section>
+
+  <section class="about" id="about">
+    <p>
+      We are all a slave to something, and I'm a slave to success. I don't want to work on someone else's dream. I can't do that, I won't do that even if it pays me a million dollars. I'll make more than that anyway.
+      <br><br><br>
+      My name is Lakshay and I'm 16. This is where I will document my journey of become rich asf. 
+    </p>
+  </section>
+
+  <section class="posts" id="posts">
+    <h1 class="posts-section-heading">Posts</h1>
+    <div class="posts-holder">
+      
+      <% if(posts.length <= 0) {%>
+          <div>
+              <p>nothing posted yet.</p>
+          </div>
+      <%} else { %>
+          <% posts.forEach(function(post){ %>
+
+        <div class="post">
+          <img src="<%=post.coverImg%>" alt="">
+          <h1>
+            <%=post.title%>
+          </h1>
+          <p>
+            <%=post.previewText.substring(0, 400) + " ..." %>
+              <a href="/posts/<%=post._id%>">read</a>
+          </p>
+        </div>
+
+        <% }) %>
+      <%}%>
+      
+    </div>
+  </section>
+
+  <%- include("partials/footer"); -%>
